@@ -1,8 +1,15 @@
 # NOAA Weather Data Pipeline — Databricks Medallion Architecture
 
-![Dashboard Preview](dashboard_preview.png)
+End-to-end data engineering pipeline ingesting live weather forecast data from the NOAA public API, transforming it through a Medallion Architecture (Bronze → Silver → Gold), and serving it via a Databricks SQL dashboard. Built on Databricks Serverless Compute with managed Delta tables throughout.
 
-> An end-to-end data engineering pipeline ingesting live weather forecast data from the NOAA public API, transforming it through a Medallion Architecture (Bronze → Silver → Gold), and serving it via a Databricks SQL dashboard. Built on Databricks Serverless Compute with managed Delta tables throughout.
+**Portfolio Project 01 — Phase 1, Open Source**
+[← Back to Portfolio](https://jansen-abit.github.io)
+
+---
+
+## Dashboard
+
+![Dashboard Preview](dashboard_preview.png)
 
 ---
 
@@ -344,7 +351,7 @@ weather_pipeline/
 
 ## Future Enhancements
 
-- **Add Snowflake serving layer** — replicate Gold table to Snowflake via Delta Sharing for cross-platform serving (Phase 2)
+- **~~Add Snowflake serving layer~~** — ✅ Completed. See [Project 02 — Snowflake Pipeline](https://github.com/jansen-abit/weather-pipeline-snowflake)
 - **Extend to SFTP ingestion** — add Auto Loader pattern for file-based weather data sources
 - **Add data quality checks** — use Delta Live Tables expectations to enforce SLAs on Silver
 - **Celsius conversion** — add metric unit support for international audiences
